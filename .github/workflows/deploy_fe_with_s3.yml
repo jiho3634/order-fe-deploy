@@ -34,7 +34,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY }}
-          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}  # 비밀 키 이름 확인 필요
+          aws-secret-access-key: ${{ secrets.AWS_SECRET }}  # 비밀 키 이름 확인 필요
           aws-region: "ap-northeast-2"
 
       - name: clear s3 bucket
