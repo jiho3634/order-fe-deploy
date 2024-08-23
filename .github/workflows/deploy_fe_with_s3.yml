@@ -12,19 +12,19 @@ jobs:
         steps:
             # actions는 github에서 제공되는 공식 워크플로우
             # checkout은 현재 repo의 main 브랜치 소스코드를 copy
-            -   name: source code checkout
-                uses: actions/checkout@v2
+            - name: source code checkout
+              uses: actions/checkout@v2
 
-            -   name: setup node.js
-                uses: actions/setup-node@v2
-                with:
-                    node-version: '20'
+            - name: setup node.js
+              uses: actions/setup-node@v2
+              with:
+                node-version: '20'
 
-            -   name: npm install
-                working-directory: .
-                # run은 직접 사용하고자 하는 명령어
-                run: npm-install
+            - name: npm install
+              working-directory: .
+              # run은 직접 사용하고자 하는 명령어
+              run: npm-install
 
-            -   name: npm build
-                working-directory: .
-                run: npm run build
+            - name: npm build
+              working-directory: .
+              run: npm run build
